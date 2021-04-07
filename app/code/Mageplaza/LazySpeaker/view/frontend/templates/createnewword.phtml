@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-4">
         <form name="addData" method="post" id="addData" class="form"
               action="<?php echo $this->getFormAction(); ?>"
               data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
@@ -7,7 +7,7 @@
             <fieldset class="fieldset">
                 <legend class="legend"><span><?= $block->escapeHtmlAttr(__('Add new word')) ?></span></legend>
                 <fieldset class="fieldset row">
-                    <div class="fields col-md-6">
+                    <div class="fields col-4 bg-primary">
                         <div class="field name required">
                             <label class="label" for="title"><span><?= $block->
                                     escapeHtmlAttr(__('Word')) ?></span></label>
@@ -17,18 +17,18 @@
                             </div>
                         </div>
                         <div class="field name required">
-                            <label class="label" for="title"><span><?= $block->
-                                    escapeHtmlAttr(__('Word-class')) ?></span></label>
+                            <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Word-class')) ?></span></label>
                             <div class="control">
                                 <input name="email" id="meaning" title="Email" value="" class="input-text validate-length" type="text"
-                                       data-validate="{required:true, 'min_text_length':'1'}">
+                                       data-validate="{required:true, 'min_text_length':'1'}" />
                             </div>
                         </div>
                         <div class="field name required">
-                            <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Telephone')) ?></span></label>
+                            <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Meaning')) ?></span></label>
                             <div class="control">
-                                <input name="telephone" id="telephone" title="Telephone" value="" class="input-text"
-                                       type="text" data-validate="{required:true}">
+                                <textarea name="meaning" id="meaning" title="Meaning" class="input-text validate-length" type="textarea"
+                                       rows="4" cols="50"
+                                       data-validate="{required:true, 'min_text_length':'1'}"></textarea>
                             </div>
                         </div>
                     </div>
